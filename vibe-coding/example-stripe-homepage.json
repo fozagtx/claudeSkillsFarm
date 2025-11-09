@@ -1,0 +1,350 @@
+{
+  "pageInfo": {
+    "url": "https://stripe.com",
+    "pageName": "Stripe - Payment Infrastructure",
+    "category": "SaaS Marketing Homepage",
+    "overallVibe": "Confident, modern, gradient-rich with dynamic animations",
+    "primaryPurpose": "Showcase payment platform capabilities and drive signups"
+  },
+  "colorSystem": {
+    "palette": {
+      "primary": ["#635BFF"],
+      "secondary": ["#0A2540"],
+      "accent": ["#00D4FF", "#7A73FF"],
+      "neutrals": ["#0A2540", "#425466", "#697386", "#8898AA", "#E3E8EE", "#F6F9FC", "#FFFFFF"],
+      "semantic": {
+        "success": "#00D924",
+        "warning": "#FFB224",
+        "error": "#DF1B41",
+        "info": "#635BFF"
+      }
+    },
+    "usage": {
+      "backgrounds": "Deep navy (#0A2540) for hero, white and very light gray (#F6F9FC) for sections, gradient overlays",
+      "text": "Dark navy (#0A2540) on light, white on dark, mid-gray (#697386) for secondary",
+      "buttons": "Purple (#635BFF) primary, white outline for secondary, gradient variants for special CTAs",
+      "borders": "Light gray (#E3E8EE) for subtle dividers"
+    },
+    "colorTheory": "Professional dark navy as foundation with vibrant purple and cyan gradients for energy and innovation. High contrast for clarity."
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": {
+        "name": "Söhne",
+        "fallback": "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif",
+        "usage": "All text - headlines, body, UI",
+        "weights": [400, 500, 600]
+      },
+      "mono": {
+        "name": "Söhne Mono",
+        "fallback": "Monaco, Courier New, monospace",
+        "usage": "Code examples, technical content"
+      }
+    },
+    "typeScale": {
+      "h1": {
+        "size": "clamp(48px, 7vw, 80px)",
+        "weight": 600,
+        "lineHeight": 1.1,
+        "letterSpacing": "-0.022em"
+      },
+      "h2": {
+        "size": "clamp(32px, 5vw, 48px)",
+        "weight": 600,
+        "lineHeight": 1.15,
+        "letterSpacing": "-0.019em"
+      },
+      "h3": {
+        "size": "28px",
+        "weight": 600,
+        "lineHeight": 1.25
+      },
+      "body-large": {
+        "size": "21px",
+        "weight": 400,
+        "lineHeight": 1.5
+      },
+      "body": {
+        "size": "17px",
+        "weight": 400,
+        "lineHeight": 1.6
+      },
+      "small": {
+        "size": "15px",
+        "weight": 400,
+        "lineHeight": 1.5
+      }
+    },
+    "hierarchy": "Strong hierarchy through size and weight. Headlines use tight letter-spacing for modern feel. Body text prioritizes readability with generous line-height."
+  },
+  "spacing": {
+    "system": "8px base scale",
+    "scale": [4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160],
+    "containerMaxWidth": "1280px",
+    "sectionPadding": "96px vertical on desktop, 64px on tablet, 48px on mobile",
+    "componentSpacing": "40px between major components, 24px between related elements",
+    "gutters": "24px on mobile, 32px on desktop"
+  },
+  "layout": {
+    "grid": {
+      "type": "12-column flexible grid",
+      "maxWidth": "1280px with 80px side padding on large screens",
+      "breakpoints": {
+        "mobile": "< 640px",
+        "tablet": "640px - 1024px",
+        "desktop": "1024px - 1440px",
+        "wide": "> 1440px"
+      }
+    },
+    "sections": [
+      {
+        "name": "Hero Section",
+        "structure": "Full-width with centered content, animated gradient background",
+        "height": "Auto with generous padding (160px top, 120px bottom)",
+        "alignment": "Center",
+        "contentWidth": "Contained (max 800px for text)"
+      },
+      {
+        "name": "Feature Grid",
+        "structure": "3-column grid on desktop, 2-col on tablet, 1-col on mobile",
+        "cardSpacing": "32px gaps between cards",
+        "alignment": "Start-aligned content in cards"
+      },
+      {
+        "name": "Product Showcase",
+        "structure": "Alternating image-text layout (image left, then right)",
+        "spacing": "96px between each showcase section"
+      }
+    ],
+    "patterns": "Heavy use of asymmetric layouts, gradient panels, floating UI elements for visual interest"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#635BFF",
+        "text": "#FFFFFF",
+        "border": "none",
+        "borderRadius": "6px",
+        "padding": "11px 16px",
+        "fontSize": "15px",
+        "fontWeight": 500,
+        "states": {
+          "hover": "background #0A2540, smooth transition 150ms",
+          "active": "scale 0.97, brightness 90%",
+          "disabled": "opacity 0.5, cursor not-allowed",
+          "focus": "outline 2px solid #635BFF with 4px offset"
+        },
+        "shadow": "0 4px 6px rgba(99, 91, 255, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08)"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "#635BFF",
+        "border": "1.5px solid #E3E8EE",
+        "borderRadius": "6px",
+        "padding": "11px 16px",
+        "states": {
+          "hover": "border-color #635BFF, background rgba(99, 91, 255, 0.04)"
+        }
+      },
+      "link": {
+        "background": "none",
+        "text": "#635BFF",
+        "decoration": "underline on hover",
+        "arrow": "animated arrow icon →"
+      }
+    },
+    "cards": {
+      "style": "Elevated with subtle shadow",
+      "borderRadius": "12px",
+      "padding": "32px",
+      "shadow": "0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)",
+      "border": "1px solid rgba(0, 0, 0, 0.04)",
+      "background": "#FFFFFF",
+      "hoverEffect": "transform translateY(-2px), shadow increases, transition 200ms cubic-bezier(0.4, 0, 0.2, 1)"
+    },
+    "forms": {
+      "inputs": {
+        "borderRadius": "6px",
+        "border": "1.5px solid #E3E8EE",
+        "padding": "11px 14px",
+        "fontSize": "15px",
+        "backgroundColor": "#FFFFFF",
+        "focusState": "border-color #635BFF, outline none, box-shadow 0 0 0 3px rgba(99, 91, 255, 0.12)",
+        "errorState": "border-color #DF1B41, box-shadow 0 0 0 3px rgba(223, 27, 65, 0.12)"
+      },
+      "labels": {
+        "position": "Above input, 8px spacing",
+        "fontSize": "13px",
+        "fontWeight": 500,
+        "color": "#425466",
+        "letterSpacing": "0.025em",
+        "textTransform": "uppercase"
+      }
+    },
+    "navigation": {
+      "type": "Horizontal sticky header",
+      "style": "White background with subtle bottom border, backdrop-blur when scrolled",
+      "height": "68px",
+      "activeState": "Purple underline (3px thick) for active link",
+      "spacing": "32px between nav items",
+      "typography": "15px, weight 500, color #425466, active color #0A2540"
+    },
+    "badges": {
+      "style": "Pill-shaped with subtle background",
+      "borderRadius": "100px",
+      "padding": "4px 12px",
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "variants": {
+        "new": {
+          "background": "rgba(99, 91, 255, 0.1)",
+          "text": "#635BFF"
+        },
+        "beta": {
+          "background": "rgba(0, 212, 255, 0.1)",
+          "text": "#00A4BD"
+        }
+      }
+    }
+  },
+  "visualEffects": {
+    "shadows": {
+      "subtle": "0 2px 4px rgba(0, 0, 0, 0.04)",
+      "medium": "0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)",
+      "large": "0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3)",
+      "glow": "0 0 20px rgba(99, 91, 255, 0.4)"
+    },
+    "borders": {
+      "style": "Solid, minimal usage",
+      "width": "1px standard, 1.5px for interactive elements",
+      "radius": {
+        "small": "6px (buttons, inputs)",
+        "medium": "12px (cards)",
+        "large": "16px (large panels)",
+        "full": "100px (pills, badges)"
+      }
+    },
+    "gradients": [
+      {
+        "name": "Purple-Cyan hero gradient",
+        "value": "linear-gradient(135deg, rgba(99, 91, 255, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%)",
+        "usage": "Hero section background overlay"
+      },
+      {
+        "name": "Mesh gradient background",
+        "value": "radial-gradient(circle at top left, rgba(99, 91, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at bottom right, rgba(0, 212, 255, 0.08) 0%, transparent 50%)",
+        "usage": "Section backgrounds for depth"
+      },
+      {
+        "name": "CTA gradient",
+        "value": "linear-gradient(180deg, #7C73E6 0%, #635BFF 100%)",
+        "usage": "Special call-to-action buttons"
+      }
+    ],
+    "blurs": {
+      "backdrop": "backdrop-filter: blur(12px) saturate(160%)",
+      "usage": "Navigation when scrolled, modal overlays"
+    }
+  },
+  "animations": {
+    "transitions": {
+      "default": "all 150ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "smooth": "all 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "snappy": "all 100ms cubic-bezier(0.4, 0, 0.2, 1)",
+      "bounce": "transform 400ms cubic-bezier(0.34, 1.56, 0.64, 1)"
+    },
+    "keyframes": [
+      {
+        "name": "fadeInUp",
+        "description": "Elements fade in while moving up 20px",
+        "duration": "600ms",
+        "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      {
+        "name": "gradientShift",
+        "description": "Gradient background subtly shifts position",
+        "duration": "8s",
+        "easing": "ease-in-out",
+        "loop": "infinite"
+      },
+      {
+        "name": "float",
+        "description": "UI elements gently float up and down",
+        "duration": "3s",
+        "easing": "ease-in-out",
+        "loop": "infinite"
+      }
+    ],
+    "microInteractions": [
+      "Buttons lift 2px on hover with shadow increase",
+      "Cards translate up 2px and shadow intensifies on hover",
+      "Links show animated arrow → that shifts right on hover",
+      "Inputs show focus ring that fades in smoothly",
+      "Navigation items underline slides in from left on hover"
+    ],
+    "scrollAnimations": [
+      "Sections fade in and translate up as they enter viewport",
+      "Product images slide in from alternating sides",
+      "Stats counter up when visible"
+    ]
+  },
+  "designPatterns": {
+    "visualStyle": "Modern, gradient-enhanced flat design with strategic depth through shadows",
+    "aesthetic": "Confident, professional, innovative, trustworthy",
+    "keyCharacteristics": [
+      "Vibrant purple and cyan gradients as signature colors",
+      "Strong typography hierarchy with tight letter-spacing",
+      "Generous whitespace and breathing room",
+      "Subtle animations that add polish without distraction",
+      "Floating UI elements and asymmetric layouts for visual interest",
+      "Clean, organized information architecture",
+      "Heavy use of shadows for depth and layering"
+    ],
+    "uniqueElements": [
+      "Animated gradient backgrounds that subtly shift",
+      "Floating product UI mockups with subtle animation",
+      "Gradient mesh overlays on sections",
+      "Smooth scroll-triggered animations",
+      "Interactive code examples with syntax highlighting",
+      "Diagonal section dividers",
+      "Glowing effects on interactive elements"
+    ]
+  },
+  "ingredients": {
+    "essentialElements": [
+      "Custom gradient generator for background effects",
+      "Intersection Observer for scroll animations",
+      "Framer Motion or similar for micro-interactions",
+      "Code syntax highlighter (Prism or similar)",
+      "Icon library matching Stripe's style (custom or Phosphor icons)",
+      "Responsive image optimization",
+      "Smooth scroll library"
+    ],
+    "techStack": {
+      "detected": "React, Next.js, custom CSS-in-JS",
+      "recommended": "React/Next.js, Tailwind CSS, Framer Motion, TypeScript"
+    }
+  },
+  "responsivePatterns": {
+    "breakpoints": {
+      "mobile": "Single column, reduced padding, smaller type scale",
+      "tablet": "2-column grids, medium padding, adjusted type scale",
+      "desktop": "Full layout, maximum spacing, full type scale"
+    },
+    "adaptations": [
+      "Hero headline scales from 48px (mobile) to 80px (desktop)",
+      "Feature grids collapse from 3-col to 2-col to 1-col",
+      "Navigation becomes hamburger menu on mobile",
+      "Section padding reduces proportionally",
+      "Cards stack vertically on mobile",
+      "Floating UI elements simplified or removed on mobile"
+    ]
+  },
+  "accessibilityFeatures": {
+    "contrast": "All text meets WCAG AA standards (4.5:1 for body, 3:1 for large text)",
+    "focusStates": "Visible focus indicators on all interactive elements",
+    "animations": "Respects prefers-reduced-motion",
+    "semantics": "Proper heading hierarchy, ARIA labels where needed",
+    "keyboard": "Full keyboard navigation support"
+  }
+}

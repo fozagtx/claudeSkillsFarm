@@ -1,0 +1,353 @@
+{
+  "productInfo": {
+    "name": "Your Product Name",
+    "version": "1.0.0",
+    "description": "Brief description of what your product/service does",
+    "features": [
+      "Core feature 1",
+      "Core feature 2",
+      "Core feature 3"
+    ],
+    "integrations": [
+      "Integration/Platform 1",
+      "Integration/Platform 2"
+    ],
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "Desktop"
+    ],
+    "systemRequirements": {
+      "minimum": "Minimum specs needed",
+      "recommended": "Recommended specs"
+    }
+  },
+  "supportTiers": {
+    "tier1": {
+      "description": "First-line support - handle common issues and initial triage",
+      "responsibilities": [
+        "Respond to initial customer inquiries",
+        "Handle password resets and account issues",
+        "Guide through basic troubleshooting",
+        "Use knowledge base to resolve common issues",
+        "Escalate complex technical issues"
+      ],
+      "escalationCriteria": [
+        "Issue not in knowledge base",
+        "Requires system access or configuration changes",
+        "Bug suspected in the product",
+        "Customer requests manager/specialist"
+      ],
+      "tools": ["Ticket system", "Knowledge base", "Customer portal"]
+    },
+    "tier2": {
+      "description": "Advanced technical support - complex troubleshooting and configuration",
+      "responsibilities": [
+        "Deep technical troubleshooting",
+        "Configuration and integration support",
+        "Log analysis and debugging",
+        "Reproduce and document bugs",
+        "Create new KB articles"
+      ],
+      "escalationCriteria": [
+        "Requires code changes",
+        "Infrastructure or architecture issues",
+        "Security vulnerabilities",
+        "Data recovery needed"
+      ],
+      "tools": ["All tier 1 tools", "System logs", "Database access", "Testing environments"]
+    },
+    "tier3": {
+      "description": "Engineering escalation - product defects and system issues",
+      "responsibilities": [
+        "Fix bugs and defects",
+        "Performance optimization",
+        "Infrastructure changes",
+        "Security patches"
+      ],
+      "tools": ["Source code", "Production access", "Monitoring tools"]
+    }
+  },
+  "responseGuidelines": {
+    "tone": ["Professional", "Empathetic", "Clear", "Patient"],
+    "principles": [
+      "Always acknowledge the customer's issue and frustration",
+      "Provide clear, step-by-step instructions",
+      "Set realistic expectations for resolution time",
+      "Follow up to ensure resolution",
+      "Educate customers to prevent future issues"
+    ],
+    "doList": [
+      "Use the customer's name",
+      "Explain technical concepts in simple terms",
+      "Provide alternatives if primary solution fails",
+      "Document all troubleshooting steps",
+      "Thank customers for their patience",
+      "Offer additional help before closing"
+    ],
+    "dontList": [
+      "Blame the customer for the issue",
+      "Use unexplained jargon or acronyms",
+      "Promise what you can't deliver",
+      "Close tickets without confirming resolution",
+      "Copy-paste responses without personalization",
+      "Argue or get defensive"
+    ],
+    "responseTime": {
+      "critical": "1 hour",
+      "high": "4 hours",
+      "medium": "24 hours",
+      "low": "48 hours"
+    }
+  },
+  "commonIssues": [
+    {
+      "id": "ISS-001",
+      "title": "Login failure - incorrect credentials",
+      "category": "Authentication",
+      "severity": "Medium",
+      "description": "User cannot log in despite entering correct credentials",
+      "symptoms": [
+        "\"Incorrect password\" error message",
+        "Login form resets without explanation",
+        "Account appears locked"
+      ],
+      "rootCause": "Cached credentials, browser issues, or actual account lock after failed attempts",
+      "solution": {
+        "steps": [
+          "Verify Caps Lock is off",
+          "Clear browser cache and cookies",
+          "Try incognito/private mode",
+          "Check if account is locked (admin portal)",
+          "Use password reset if needed"
+        ],
+        "estimatedTime": "5 minutes",
+        "requiresEscalation": false
+      },
+      "prevention": "Educate users about account lockout policies and password managers",
+      "relatedArticles": ["KB-001", "KB-015"]
+    },
+    {
+      "id": "ISS-002",
+      "title": "Slow performance",
+      "category": "Performance",
+      "severity": "Medium",
+      "description": "Application is running slower than normal",
+      "symptoms": [
+        "Pages take long to load",
+        "Timeouts on operations",
+        "Lag in user interface"
+      ],
+      "rootCause": "Network issues, server load, or client-side resource constraints",
+      "solution": {
+        "steps": [
+          "Check internet connection speed",
+          "Clear browser cache",
+          "Disable browser extensions",
+          "Check system resources (CPU, RAM)",
+          "Try different time of day",
+          "Test on different network"
+        ],
+        "estimatedTime": "10 minutes",
+        "requiresEscalation": false
+      },
+      "prevention": "Recommend system requirements and optimal network conditions",
+      "relatedArticles": ["KB-023", "KB-045"]
+    }
+  ],
+  "troubleshootingWorkflows": [
+    {
+      "name": "Authentication Issues",
+      "category": "Login/Access",
+      "description": "Use when customer cannot access their account",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Verify the username/email being used is correct",
+          "expectedResult": "Customer confirms correct credentials",
+          "ifSuccess": "Proceed to step 2",
+          "ifFailure": "Guide to account recovery or creation"
+        },
+        {
+          "step": 2,
+          "action": "Check for common input errors (Caps Lock, extra spaces)",
+          "expectedResult": "Login succeeds",
+          "ifSuccess": "Issue resolved - educate on password best practices",
+          "ifFailure": "Proceed to step 3"
+        },
+        {
+          "step": 3,
+          "action": "Clear browser cache and try incognito mode",
+          "expectedResult": "Login succeeds in clean browser state",
+          "ifSuccess": "Issue resolved - advise on cache management",
+          "ifFailure": "Proceed to step 4"
+        },
+        {
+          "step": 4,
+          "action": "Check if account is locked (admin portal)",
+          "expectedResult": "Account status is visible",
+          "ifSuccess": "Unlock account if needed, or proceed to password reset",
+          "ifFailure": "Escalate to Tier 2 - possible system issue"
+        }
+      ]
+    }
+  ],
+  "knowledgeBase": [
+    {
+      "id": "KB-001",
+      "title": "How to Reset Your Password",
+      "category": "Account Management",
+      "tags": ["password", "reset", "login", "authentication"],
+      "content": "Step-by-step guide for password reset:\n\n1. Navigate to the login page\n2. Click 'Forgot Password' link below login form\n3. Enter your registered email address\n4. Check email inbox (and spam folder) for reset link\n5. Click the link within 24 hours (it expires)\n6. Create a new strong password meeting requirements\n7. Log in with new password\n\nPassword requirements:\n- Minimum 8 characters\n- At least one uppercase letter\n- At least one number\n- At least one special character\n\nTroubleshooting:\n- Not receiving email? Check spam folder and verify email address\n- Link expired? Request a new reset\n- Still having issues? Contact support",
+      "relatedIssues": ["ISS-001"],
+      "lastUpdated": "2024-01-15"
+    }
+  ],
+  "escalationProcedures": {
+    "tier2": {
+      "criteria": [
+        "Tier 1 troubleshooting exhausted",
+        "Requires technical investigation",
+        "Suspected product bug",
+        "Integration or API issues",
+        "Advanced configuration needed"
+      ],
+      "process": "1. Document all troubleshooting steps attempted\n2. Gather relevant logs and screenshots\n3. Assign ticket to Tier 2 queue\n4. Brief Tier 2 agent via internal notes\n5. Notify customer of escalation and expected response time",
+      "requiredInfo": [
+        "Detailed issue description",
+        "Steps already attempted",
+        "Error messages or codes",
+        "System/browser information",
+        "Screenshots or screen recordings",
+        "Customer impact and urgency"
+      ],
+      "sla": "4 hour response for high priority, 24 hours for medium/low"
+    },
+    "tier3": {
+      "criteria": [
+        "Confirmed product bug",
+        "System outage or infrastructure issue",
+        "Security vulnerability",
+        "Performance degradation affecting multiple customers",
+        "Requires code changes"
+      ],
+      "process": "1. Create detailed bug report or incident ticket\n2. Include reproduction steps\n3. Notify engineering team via designated channel\n4. Set customer expectations for fix timeline\n5. Provide workaround if available",
+      "requiredInfo": [
+        "Detailed reproduction steps",
+        "Expected vs actual behavior",
+        "Logs and error traces",
+        "Customer count affected",
+        "Business impact assessment"
+      ],
+      "sla": "Immediate for critical issues, 1 business day for others"
+    },
+    "emergency": {
+      "criteria": [
+        "Complete system outage",
+        "Security breach or data leak",
+        "Data loss affecting customers",
+        "Payment processing failures"
+      ],
+      "contacts": [
+        "Engineering On-call: [contact info]",
+        "Support Manager: [contact info]",
+        "VP Engineering: [contact info]"
+      ],
+      "process": "1. Immediately notify on-call engineer\n2. Create incident in monitoring system\n3. Alert support manager\n4. Begin customer communication plan\n5. Document all actions in incident log",
+      "communication": "Update status page every 30 minutes, email affected customers within 1 hour"
+    }
+  },
+  "macros": [
+    {
+      "name": "Initial Response",
+      "useCase": "First response to any support ticket",
+      "template": "Hi [CustomerName],\n\nThank you for contacting [CompanyName] support. I understand you're experiencing [issue], and I'm here to help resolve this for you.\n\nI'll need a few more details to assist you better:\n[Questions based on issue]\n\nOnce I have this information, I'll be able to provide you with a solution.\n\nBest regards,\n[AgentName]\n[CompanyName] Support Team"
+    },
+    {
+      "name": "Resolution Confirmation",
+      "useCase": "When issue is resolved",
+      "template": "Hi [CustomerName],\n\nI'm glad we were able to resolve [issue] for you!\n\nTo summarize what we did:\n[Brief recap of solution]\n\nIf you experience this again or have any other questions, please don't hesitate to reach out. We're here to help!\n\nBest regards,\n[AgentName]\n\nTicket #[TicketNumber]"
+    },
+    {
+      "name": "Escalation Notice",
+      "useCase": "When escalating to higher tier",
+      "template": "Hi [CustomerName],\n\nI've escalated your case to our [TeamName] team who specializes in [issue type]. They'll have more tools and expertise to resolve this for you.\n\nYou can expect:\n- Contact within [timeframe]\n- [What they'll do next]\n\nYour ticket number is #[TicketNumber] for reference.\n\nI'll monitor the progress and make sure you get the help you need.\n\nBest regards,\n[AgentName]"
+    },
+    {
+      "name": "Follow-up Request",
+      "useCase": "Checking if issue is resolved",
+      "template": "Hi [CustomerName],\n\nI'm following up on ticket #[TicketNumber] regarding [issue].\n\nHave the steps we discussed resolved the problem, or are you still experiencing issues?\n\nIf everything is working well now, I'll close this ticket. If not, I'm here to help further.\n\nLooking forward to hearing from you.\n\nBest regards,\n[AgentName]"
+    }
+  ],
+  "customerSegments": {
+    "enterprise": {
+      "sla": {
+        "critical": "30 minutes response, 2 hours resolution",
+        "high": "2 hours response, 8 hours resolution",
+        "medium": "8 hours response, 24 hours resolution",
+        "low": "24 hours response, 5 business days resolution"
+      },
+      "features": [
+        "24/7 priority support",
+        "Dedicated account manager",
+        "Custom SLAs",
+        "Direct escalation path",
+        "Quarterly business reviews"
+      ],
+      "contacts": {
+        "accountManager": "Name and contact",
+        "technicalLead": "Name and contact"
+      }
+    },
+    "business": {
+      "sla": {
+        "critical": "2 hours response, 8 hours resolution",
+        "high": "8 hours response, 24 hours resolution",
+        "medium": "24 hours response, 3 business days resolution",
+        "low": "48 hours response, 10 business days resolution"
+      },
+      "features": [
+        "Email and chat support (business hours)",
+        "Priority in queue",
+        "Knowledge base access",
+        "Monthly usage reports"
+      ]
+    },
+    "standard": {
+      "sla": {
+        "critical": "4 hours response, 24 hours resolution",
+        "high": "24 hours response, 3 business days resolution",
+        "medium": "48 hours response, 5 business days resolution",
+        "low": "72 hours response, best effort"
+      },
+      "features": [
+        "Email support",
+        "Knowledge base access",
+        "Community forum"
+      ]
+    }
+  },
+  "integrationSupport": {
+    "commonIntegrations": [
+      {
+        "name": "Integration Name",
+        "documentationUrl": "URL to docs",
+        "commonIssues": ["Issue 1", "Issue 2"],
+        "supportContact": "Integration partner support info"
+      }
+    ]
+  },
+  "csat": {
+    "targets": {
+      "overall": "90%",
+      "tier1": "85%",
+      "tier2": "90%"
+    },
+    "surveyQuestions": [
+      "How satisfied were you with the resolution?",
+      "How would you rate the agent's knowledge?",
+      "How likely are you to recommend us?"
+    ]
+  }
+}
